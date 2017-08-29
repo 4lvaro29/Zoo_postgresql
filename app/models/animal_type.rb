@@ -1,4 +1,4 @@
 class AnimalType < ApplicationRecord
-  has_many :animal, dependent: :destroy
+  has_many :animals, dependent: :destroy
   validates :name, presence: true
 end
