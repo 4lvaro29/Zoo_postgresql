@@ -1,7 +1,7 @@
 class Animal < ApplicationRecord
   belongs_to :animal_type
   scope :changos, -> {where(animal_type: AnimalType.find_by(name:"Chango"))}
-  scope :tipo_animal, -> (tipo) {where(animal__type: AnimalType.find_by(name: tipo))}
+  scope :tipo_animal, -> (tipo) {where(animal_type: AnimalType.find_by(name: tipo))}
   scope :ultimos, -> {last(5)}
 
 
