@@ -10,7 +10,7 @@ class Animal < ApplicationRecord
   end
 
   def self.tipo(num)
-    where(animal__type: AnimalType.find_by(name: num))
+    where(animal_type: AnimalType.find_by(name: num))
   end
 
   def self.ultimos
